@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18672850CB4C00128204 /* AppDelegate.swift */; };
+		F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18692850CB4C00128204 /* SceneDelegate.swift */; };
+		F34B186C2850CB4C00128204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B186B2850CB4C00128204 /* ViewController.swift */; };
+		F34B186F2850CB4C00128204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34B186D2850CB4C00128204 /* Main.storyboard */; };
+		F34B18712850CB4D00128204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34B18702850CB4D00128204 /* Assets.xcassets */; };
+		F34B18742850CB4D00128204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34B18722850CB4D00128204 /* LaunchScreen.storyboard */; };
+		F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B187E2850CB4D00128204 /* google_file_managerTests.swift */; };
+		F34B18892850CB4D00128204 /* google_file_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18882850CB4D00128204 /* google_file_managerUITests.swift */; };
+		F34B188B2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F34B187B2850CB4D00128204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34B185C2850CB4C00128204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F34B18632850CB4C00128204;
+			remoteInfo = "google-file-manager";
+		};
+		F34B18852850CB4D00128204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34B185C2850CB4C00128204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F34B18632850CB4C00128204;
+			remoteInfo = "google-file-manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F34B18642850CB4C00128204 /* google-file-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "google-file-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34B18672850CB4C00128204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F34B18692850CB4C00128204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F34B186B2850CB4C00128204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F34B186E2850CB4C00128204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F34B18702850CB4D00128204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F34B18732850CB4D00128204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F34B18752850CB4D00128204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F34B187A2850CB4D00128204 /* google-file-managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "google-file-managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34B187E2850CB4D00128204 /* google_file_managerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerTests.swift; sourceTree = "<group>"; };
+		F34B18842850CB4D00128204 /* google-file-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "google-file-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34B18882850CB4D00128204 /* google_file_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITests.swift; sourceTree = "<group>"; };
+		F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F34B18612850CB4C00128204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18772850CB4D00128204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18812850CB4D00128204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F34B185B2850CB4C00128204 = {
+			isa = PBXGroup;
+			children = (
+				F34B18662850CB4C00128204 /* google-file-manager */,
+				F34B187D2850CB4D00128204 /* google-file-managerTests */,
+				F34B18872850CB4D00128204 /* google-file-managerUITests */,
+				F34B18652850CB4C00128204 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F34B18652850CB4C00128204 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F34B18642850CB4C00128204 /* google-file-manager.app */,
+				F34B187A2850CB4D00128204 /* google-file-managerTests.xctest */,
+				F34B18842850CB4D00128204 /* google-file-managerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F34B18662850CB4C00128204 /* google-file-manager */ = {
+			isa = PBXGroup;
+			children = (
+				F34B18672850CB4C00128204 /* AppDelegate.swift */,
+				F34B18692850CB4C00128204 /* SceneDelegate.swift */,
+				F34B186B2850CB4C00128204 /* ViewController.swift */,
+				F34B186D2850CB4C00128204 /* Main.storyboard */,
+				F34B18702850CB4D00128204 /* Assets.xcassets */,
+				F34B18722850CB4D00128204 /* LaunchScreen.storyboard */,
+				F34B18752850CB4D00128204 /* Info.plist */,
+			);
+			path = "google-file-manager";
+			sourceTree = "<group>";
+		};
+		F34B187D2850CB4D00128204 /* google-file-managerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F34B187E2850CB4D00128204 /* google_file_managerTests.swift */,
+			);
+			path = "google-file-managerTests";
+			sourceTree = "<group>";
+		};
+		F34B18872850CB4D00128204 /* google-file-managerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F34B18882850CB4D00128204 /* google_file_managerUITests.swift */,
+				F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */,
+			);
+			path = "google-file-managerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F34B18632850CB4C00128204 /* google-file-manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F34B188E2850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-manager" */;
+			buildPhases = (
+				F34B18602850CB4C00128204 /* Sources */,
+				F34B18612850CB4C00128204 /* Frameworks */,
+				F34B18622850CB4C00128204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "google-file-manager";
+			productName = "google-file-manager";
+			productReference = F34B18642850CB4C00128204 /* google-file-manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F34B18792850CB4D00128204 /* google-file-managerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F34B18912850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerTests" */;
+			buildPhases = (
+				F34B18762850CB4D00128204 /* Sources */,
+				F34B18772850CB4D00128204 /* Frameworks */,
+				F34B18782850CB4D00128204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F34B187C2850CB4D00128204 /* PBXTargetDependency */,
+			);
+			name = "google-file-managerTests";
+			productName = "google-file-managerTests";
+			productReference = F34B187A2850CB4D00128204 /* google-file-managerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F34B18832850CB4D00128204 /* google-file-managerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F34B18942850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerUITests" */;
+			buildPhases = (
+				F34B18802850CB4D00128204 /* Sources */,
+				F34B18812850CB4D00128204 /* Frameworks */,
+				F34B18822850CB4D00128204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F34B18862850CB4D00128204 /* PBXTargetDependency */,
+			);
+			name = "google-file-managerUITests";
+			productName = "google-file-managerUITests";
+			productReference = F34B18842850CB4D00128204 /* google-file-managerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F34B185C2850CB4C00128204 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F34B18632850CB4C00128204 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					F34B18792850CB4D00128204 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F34B18632850CB4C00128204;
+					};
+					F34B18832850CB4D00128204 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F34B18632850CB4C00128204;
+					};
+				};
+			};
+			buildConfigurationList = F34B185F2850CB4C00128204 /* Build configuration list for PBXProject "google-file-manager" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F34B185B2850CB4C00128204;
+			productRefGroup = F34B18652850CB4C00128204 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F34B18632850CB4C00128204 /* google-file-manager */,
+				F34B18792850CB4D00128204 /* google-file-managerTests */,
+				F34B18832850CB4D00128204 /* google-file-managerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F34B18622850CB4C00128204 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34B18742850CB4D00128204 /* LaunchScreen.storyboard in Resources */,
+				F34B18712850CB4D00128204 /* Assets.xcassets in Resources */,
+				F34B186F2850CB4C00128204 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18782850CB4D00128204 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18822850CB4D00128204 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F34B18602850CB4C00128204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34B186C2850CB4C00128204 /* ViewController.swift in Sources */,
+				F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */,
+				F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18762850CB4D00128204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34B18802850CB4D00128204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34B18892850CB4D00128204 /* google_file_managerUITests.swift in Sources */,
+				F34B188B2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F34B187C2850CB4D00128204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F34B18632850CB4C00128204 /* google-file-manager */;
+			targetProxy = F34B187B2850CB4D00128204 /* PBXContainerItemProxy */;
+		};
+		F34B18862850CB4D00128204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F34B18632850CB4C00128204 /* google-file-manager */;
+			targetProxy = F34B18852850CB4D00128204 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F34B186D2850CB4C00128204 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F34B186E2850CB4C00128204 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F34B18722850CB4D00128204 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F34B18732850CB4D00128204 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F34B188C2850CB4D00128204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F34B188D2850CB4D00128204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F34B188F2850CB4D00128204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "google-file-manager/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F34B18902850CB4D00128204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "google-file-manager/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F34B18922850CB4D00128204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/google-file-manager.app/google-file-manager";
+			};
+			name = Debug;
+		};
+		F34B18932850CB4D00128204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/google-file-manager.app/google-file-manager";
+			};
+			name = Release;
+		};
+		F34B18952850CB4D00128204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "google-file-manager";
+			};
+			name = Debug;
+		};
+		F34B18962850CB4D00128204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9843C43NA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ICSOFT.google-file-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "google-file-manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F34B185F2850CB4C00128204 /* Build configuration list for PBXProject "google-file-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34B188C2850CB4D00128204 /* Debug */,
+				F34B188D2850CB4D00128204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F34B188E2850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34B188F2850CB4D00128204 /* Debug */,
+				F34B18902850CB4D00128204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F34B18912850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34B18922850CB4D00128204 /* Debug */,
+				F34B18932850CB4D00128204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F34B18942850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34B18952850CB4D00128204 /* Debug */,
+				F34B18962850CB4D00128204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F34B185C2850CB4C00128204 /* Project object */;
+}
