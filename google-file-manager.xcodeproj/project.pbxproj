@@ -97,8 +97,7 @@
 		F34B18662850CB4C00128204 /* google-file-manager */ = {
 			isa = PBXGroup;
 			children = (
-				F34B18672850CB4C00128204 /* AppDelegate.swift */,
-				F34B18692850CB4C00128204 /* SceneDelegate.swift */,
+				F34B18972850CDC100128204 /* Application */,
 				F34B186B2850CB4C00128204 /* ViewController.swift */,
 				F34B18702850CB4D00128204 /* Assets.xcassets */,
 				F34B18722850CB4D00128204 /* LaunchScreen.storyboard */,
@@ -122,6 +121,15 @@
 				F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */,
 			);
 			path = "google-file-managerUITests";
+			sourceTree = "<group>";
+		};
+		F34B18972850CDC100128204 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F34B18672850CB4C00128204 /* AppDelegate.swift */,
+				F34B18692850CB4C00128204 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
