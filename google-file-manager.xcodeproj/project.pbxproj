@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73ED55BA62006FA9B11EA809 /* Pods_google_file_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F38E4B9B0F528143ADBD8 /* Pods_google_file_manager.framework */; };
+		99713D98DD358CA2F5835177 /* Pods_google_file_managerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E679E5EEE5152B6431302 /* Pods_google_file_managerTests.framework */; };
+		BD64EF93C607474585DAC228 /* Pods_google_file_manager_google_file_managerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F649D3B27124E2A039A87254 /* Pods_google_file_manager_google_file_managerUITests.framework */; };
 		F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18672850CB4C00128204 /* AppDelegate.swift */; };
 		F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18692850CB4C00128204 /* SceneDelegate.swift */; };
 		F34B186C2850CB4C00128204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B186B2850CB4C00128204 /* ViewController.swift */; };
@@ -15,6 +18,12 @@
 		F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B187E2850CB4D00128204 /* google_file_managerTests.swift */; };
 		F34B18892850CB4D00128204 /* google_file_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18882850CB4D00128204 /* google_file_managerUITests.swift */; };
 		F34B188B2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */; };
+		F34B18992851AB8C00128204 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18982851AB8C00128204 /* GoogleService.swift */; };
+		F34B189B2851AEBE00128204 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B189A2851AEBE00128204 /* SignInViewController.swift */; };
+		F34B189D2851BD5F00128204 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B189C2851BD5F00128204 /* AuthenticationViewModel.swift */; };
+		F34B189F28536A3600128204 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B189E28536A3600128204 /* UIView+Constraint.swift */; };
+		F3C51E8B28548CD900C23755 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8A28548CD900C23755 /* NetworkService.swift */; };
+		F3C51E9028548E5D00C23755 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8F28548E5D00C23755 /* FilesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F64377465B98E6C5FF3DC46 /* Pods-google-file-manager-google-file-managerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-manager-google-file-managerUITests.debug.xcconfig"; path = "Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		275E40EEC6F7911F954E23CD /* Pods-google-file-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-manager.debug.xcconfig"; path = "Target Support Files/Pods-google-file-manager/Pods-google-file-manager.debug.xcconfig"; sourceTree = "<group>"; };
+		2C5F38E4B9B0F528143ADBD8 /* Pods_google_file_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_google_file_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31A02F32652DCA01207F31D7 /* Pods-google-file-managerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-managerTests.release.xcconfig"; path = "Target Support Files/Pods-google-file-managerTests/Pods-google-file-managerTests.release.xcconfig"; sourceTree = "<group>"; };
+		35EB37CBD9E0651D8D957558 /* Pods-google-file-manager-google-file-managerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-manager-google-file-managerUITests.release.xcconfig"; path = "Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D5C43CDD7DBA2613050027A /* Pods-google-file-managerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-managerTests.debug.xcconfig"; path = "Target Support Files/Pods-google-file-managerTests/Pods-google-file-managerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2A0B9B99C89942B13EB4CF4 /* Pods-google-file-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-manager.release.xcconfig"; path = "Target Support Files/Pods-google-file-manager/Pods-google-file-manager.release.xcconfig"; sourceTree = "<group>"; };
+		E92E679E5EEE5152B6431302 /* Pods_google_file_managerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_google_file_managerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18642850CB4C00128204 /* google-file-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "google-file-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18672850CB4C00128204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F34B18692850CB4C00128204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +64,13 @@
 		F34B18842850CB4D00128204 /* google-file-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "google-file-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18882850CB4D00128204 /* google_file_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITests.swift; sourceTree = "<group>"; };
 		F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F34B18982851AB8C00128204 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		F34B189A2851AEBE00128204 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F34B189C2851BD5F00128204 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		F34B189E28536A3600128204 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		F3C51E8A28548CD900C23755 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F3C51E8F28548E5D00C23755 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
+		F649D3B27124E2A039A87254 /* Pods_google_file_manager_google_file_managerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_google_file_manager_google_file_managerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73ED55BA62006FA9B11EA809 /* Pods_google_file_manager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99713D98DD358CA2F5835177 /* Pods_google_file_managerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD64EF93C607474585DAC228 /* Pods_google_file_manager_google_file_managerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		027DDB24A6A8F437D78F5CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C5F38E4B9B0F528143ADBD8 /* Pods_google_file_manager.framework */,
+				F649D3B27124E2A039A87254 /* Pods_google_file_manager_google_file_managerUITests.framework */,
+				E92E679E5EEE5152B6431302 /* Pods_google_file_managerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D59F83050505B4410AC21735 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				275E40EEC6F7911F954E23CD /* Pods-google-file-manager.debug.xcconfig */,
+				B2A0B9B99C89942B13EB4CF4 /* Pods-google-file-manager.release.xcconfig */,
+				0F64377465B98E6C5FF3DC46 /* Pods-google-file-manager-google-file-managerUITests.debug.xcconfig */,
+				35EB37CBD9E0651D8D957558 /* Pods-google-file-manager-google-file-managerUITests.release.xcconfig */,
+				5D5C43CDD7DBA2613050027A /* Pods-google-file-managerTests.debug.xcconfig */,
+				31A02F32652DCA01207F31D7 /* Pods-google-file-managerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F34B185B2850CB4C00128204 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +131,8 @@
 				F34B187D2850CB4D00128204 /* google-file-managerTests */,
 				F34B18872850CB4D00128204 /* google-file-managerUITests */,
 				F34B18652850CB4C00128204 /* Products */,
+				D59F83050505B4410AC21735 /* Pods */,
+				027DDB24A6A8F437D78F5CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +149,14 @@
 		F34B18662850CB4C00128204 /* google-file-manager */ = {
 			isa = PBXGroup;
 			children = (
+				F3C51E8E28548E3D00C23755 /* Model */,
 				F34B18972850CDC100128204 /* Application */,
 				F34B186B2850CB4C00128204 /* ViewController.swift */,
+				F34B189A2851AEBE00128204 /* SignInViewController.swift */,
+				F3C51E8D28548DAA00C23755 /* Extensions */,
+				F34B189C2851BD5F00128204 /* AuthenticationViewModel.swift */,
 				F34B18702850CB4D00128204 /* Assets.xcassets */,
+				F3C51E8C28548D9200C23755 /* Services */,
 				F34B18722850CB4D00128204 /* LaunchScreen.storyboard */,
 				F34B18752850CB4D00128204 /* Info.plist */,
 			);
@@ -132,6 +189,31 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		F3C51E8C28548D9200C23755 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F34B18982851AB8C00128204 /* GoogleService.swift */,
+				F3C51E8A28548CD900C23755 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F3C51E8D28548DAA00C23755 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F34B189E28536A3600128204 /* UIView+Constraint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3C51E8E28548E3D00C23755 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3C51E8F28548E5D00C23755 /* FilesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F34B188E2850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-manager" */;
 			buildPhases = (
+				AB26AAD5775DB3119754A630 /* [CP] Check Pods Manifest.lock */,
 				F34B18602850CB4C00128204 /* Sources */,
 				F34B18612850CB4C00128204 /* Frameworks */,
 				F34B18622850CB4C00128204 /* Resources */,
+				E40BFFD20BF05125785AC4C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F34B18912850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerTests" */;
 			buildPhases = (
+				8FE707359CF3447A0F7BDEC2 /* [CP] Check Pods Manifest.lock */,
 				F34B18762850CB4D00128204 /* Sources */,
 				F34B18772850CB4D00128204 /* Frameworks */,
 				F34B18782850CB4D00128204 /* Resources */,
@@ -174,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F34B18942850CB4D00128204 /* Build configuration list for PBXNativeTarget "google-file-managerUITests" */;
 			buildPhases = (
+				604D0B196E4F5246C9BB922B /* [CP] Check Pods Manifest.lock */,
 				F34B18802850CB4D00128204 /* Sources */,
 				F34B18812850CB4D00128204 /* Frameworks */,
 				F34B18822850CB4D00128204 /* Resources */,
+				6B193921623519303515E6B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,13 +344,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		604D0B196E4F5246C9BB922B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-google-file-manager-google-file-managerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B193921623519303515E6B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FE707359CF3447A0F7BDEC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-google-file-managerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB26AAD5775DB3119754A630 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-google-file-manager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40BFFD20BF05125785AC4C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-google-file-manager/Pods-google-file-manager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-google-file-manager/Pods-google-file-manager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-google-file-manager/Pods-google-file-manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F34B18602850CB4C00128204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34B189D2851BD5F00128204 /* AuthenticationViewModel.swift in Sources */,
+				F34B189F28536A3600128204 /* UIView+Constraint.swift in Sources */,
+				F3C51E9028548E5D00C23755 /* FilesModel.swift in Sources */,
+				F3C51E8B28548CD900C23755 /* NetworkService.swift in Sources */,
+				F34B18992851AB8C00128204 /* GoogleService.swift in Sources */,
 				F34B186C2850CB4C00128204 /* ViewController.swift in Sources */,
 				F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */,
+				F34B189B2851AEBE00128204 /* SignInViewController.swift in Sources */,
 				F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +615,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -428,6 +625,7 @@
 		};
 		F34B188F2850CB4D00128204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 275E40EEC6F7911F954E23CD /* Pods-google-file-manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +653,7 @@
 		};
 		F34B18902850CB4D00128204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2A0B9B99C89942B13EB4CF4 /* Pods-google-file-manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +681,7 @@
 		};
 		F34B18922850CB4D00128204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5C43CDD7DBA2613050027A /* Pods-google-file-managerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +702,7 @@
 		};
 		F34B18932850CB4D00128204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A02F32652DCA01207F31D7 /* Pods-google-file-managerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +723,7 @@
 		};
 		F34B18952850CB4D00128204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F64377465B98E6C5FF3DC46 /* Pods-google-file-manager-google-file-managerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +742,7 @@
 		};
 		F34B18962850CB4D00128204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35EB37CBD9E0651D8D957558 /* Pods-google-file-manager-google-file-managerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
