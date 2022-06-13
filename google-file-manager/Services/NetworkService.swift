@@ -35,18 +35,11 @@ class NetworkService: NSObject {
             
             do {
                 let googleSheet = try JSONDecoder().decode(GoogleSheet.self, from: jsonData)
-                print("Ок. Successfully received Soc")
+                print("Ок. Successfully received googleSheet")
                 
-//                socName = data.i.name
-//                socUrlImage = soc.image
-//                socText = soc.text
+                filesArray = [FilesModel]()
                 for json in googleSheet.values {
-//                    var trackArray = [Track]()
-//                    for lesson in seria.lessons {
-//                        trackArray.append(Track(number: lesson.number, name: lesson.name, albumName: seria.name, duration: secToTime(duration: Double(lesson.duration)), url: lesson.url, image: lesson.image))
-//                    }
-                    
-                   filesArray.append(FilesModel(json: json))
+                    filesArray.append(FilesModel(json: json))
                 }
                 
                 completion(.success(filesArray))
@@ -70,6 +63,5 @@ class NetworkService: NSObject {
             }
         }.resume()
     }
-    
 }
 

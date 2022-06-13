@@ -5,7 +5,7 @@
 //  Created by Леонід Квіт on 11.06.2022.
 //
 
-import SwiftyJSON
+import Foundation
 
 struct FilesModel: Codable {
     var itemUUID = ""

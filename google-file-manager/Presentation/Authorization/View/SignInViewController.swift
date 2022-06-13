@@ -71,7 +71,7 @@ extension SignInViewController {
         
         googleService.signIn { [weak self] in
             if !GoogleService.accessToken.isEmpty {
-                self?.navigationController?.pushViewController(ViewController(), animated: true)
+                self?.navigationController?.pushViewController(FilesViewController(), animated: true)
             }
         }
         
