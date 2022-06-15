@@ -12,7 +12,6 @@ class FilesTableViewCell: UITableViewCell {
     let backgroundViewCell: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.TableView.cellBackground
-        view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view

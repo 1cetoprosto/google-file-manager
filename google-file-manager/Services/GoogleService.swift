@@ -136,10 +136,10 @@ class GoogleService: NSObject {
 //    func setClientID(withID id: String) {
 //        GIDSignIn.sharedInstance.clientID = id
 //    }
-//
-//    func handle(url: URL) -> Bool {
-//        return GIDSignIn.sharedInstance.handle(url)
-//    }
+
+    func handle(url: URL) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
+    }
 }
 
 //extension GoogleService: GIDSignInDelegate {

@@ -43,7 +43,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Authorization"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.Main.background
         //navigationController?.view.backgroundColor = .systemBlue
         
         setConstraints()

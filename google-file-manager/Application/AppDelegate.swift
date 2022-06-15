@@ -12,10 +12,11 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //    private let id = "453999149277-hg97ils5re9m581naqf6ic8ihnjm6r9k.apps.googleusercontent.com"
-//    private let googleService = GoogleService(authViewModel: <#AuthenticationViewModel#>)
+//    private let googleService = GoogleService(authViewModel: AuthenticationViewModel())
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //googleService.setClientID(withID: id)
+        
         return true
     }
     
@@ -35,7 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //    @available(iOS 9.0, *)
 //        func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-//            return googleService.handle(url: url)
+//            return GoogleService().handle(url: url)
 //        }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        GoogleService(authViewModel: AuthenticationViewModel()).handle(url: url)
+        //return GIDSignIn.sharedInstance.handle(url) //as URL?,
+//                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
 }
 
