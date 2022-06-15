@@ -9,26 +9,41 @@ import Foundation
 
 let sheetId = "1VHTwoVjLhpKplz0O0zGitzVLeGHfucFwYITJySSLSX4"
 
+// Protocol for MOCK/Real
+protocol URLSessionProtocol {
+    typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+    
+    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
+}
+
+protocol URLSessionDataTaskProtocol {
+    func resume()
+}
+
 class NetworkService: NSObject {
-    func getFiles(completion: @escaping (Result<[FilesModel]?, Error>) -> Void) {
-        let urlString = "https://sheets.googleapis.com/v4/spreadsheets/\(sheetId)/values/Sheet1!A1:D1000"
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
-        }
+    
+    typealias completeClosure = ( _ data: Data?, _ error: Error?)->Void
+    
+    private let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol) {
+        self.session = session
+    }
+    
+    func getFiles(url: URL, completion: @escaping (Result<[FilesModel]?, Error>) -> Void) {
         
         var request = URLRequest(url: url)
         request.addValue("Bearer \(GoogleService.accessToken)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"
         
-        URLSession.shared.dataTask(with: request) { jsonData, _, error in
+        let task = session.dataTask(with: request) { data, _, error in
             if let error = error {
                 print("Error dataTask: \(error.localizedDescription)")
                 completion(.failure(error))
                 return
             }
             
-            guard let jsonData = jsonData else {
+            guard let jsonData = data else {
                 print("Error receiving data")
                 return
             }
@@ -61,7 +76,48 @@ class NetworkService: NSObject {
                 print("error: ", error)
                 completion(.failure(error))
             }
-        }.resume()
+        }
+            task.resume()
     }
 }
+
+//MARK: Conform the protocol
+extension URLSession: URLSessionProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
+        return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
+    }
+}
+
+extension URLSessionDataTask: URLSessionDataTaskProtocol {}
+
+//MARK: MOCK
+class MockURLSession: URLSessionProtocol {
+
+    var nextDataTask = MockURLSessionDataTask()
+    var nextData: Data?
+    var nextError: Error?
+    
+    private (set) var lastURL: URL?
+    
+    func successHttpURLResponse(request: URLRequest) -> URLResponse {
+        return HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+    }
+    
+    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
+        lastURL = request.url
+        
+        completionHandler(nextData, successHttpURLResponse(request: request), nextError)
+        return nextDataTask
+    }
+
+}
+
+class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+    private (set) var resumeWasCalled = false
+    
+    func resume() {
+        resumeWasCalled = true
+    }
+}
+
 

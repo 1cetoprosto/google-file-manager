@@ -13,7 +13,6 @@ class FilesModelTests: XCTestCase {
     var json = [String]()
     var filesModel: FilesModel?
     
-    
     override func setUp()  {
         super.setUp()
         json = ["Foo","Bar","Baz","Foo"]
@@ -27,11 +26,11 @@ class FilesModelTests: XCTestCase {
     }
 
     func testInitFilesModelWithJSON() throws {
-        XCTAssertNotNil(filesModel, "FilesModel should be not nil")
+        XCTAssertNotNil(filesModel)
     }
     
     func testCountOfJsonArrayEqual4() {
-        XCTAssertGreaterThanOrEqual(json.count, 4, "Count of JSON array should be greater than or equal 4")
+        XCTAssertGreaterThanOrEqual(json.count, 4)
     }
     
     func testWhenGivenValueSet() {

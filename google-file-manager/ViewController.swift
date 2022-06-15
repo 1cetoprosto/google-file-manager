@@ -42,9 +42,16 @@ class ViewController: UIViewController {
         
     }
     
-     func getFiles() {
-        let networkService = NetworkService()
-        networkService.getFiles { [weak self] result in
+    func getFiles() {
+        let networkService = NetworkService(session: URLSession.shared)
+        
+        let urlString = "https://sheets.googleapis.com/v4/spreadsheets/\(sheetId)/values/Sheet1!A1:D1000"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+        
+        networkService.getFiles(url: url) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {

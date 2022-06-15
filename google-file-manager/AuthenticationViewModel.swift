@@ -53,17 +53,6 @@ final class AuthenticationViewModel: ObservableObject {
     func disconnect() {
         authenticator.disconnect()
     }
-    
-    //  var hasBirthdayReadScope: Bool {
-    //    return authorizedScopes.contains(BirthdayLoader.birthdayReadScope)
-    //  }
-    //
-    //  /// Adds the requested birthday read scope.
-    //  /// - parameter completion: An escaping closure that is called upon successful completion.
-    //  func addBirthdayReadScope(completion: @escaping () -> Void) {
-    //    authenticator.addBirthdayReadScope(completion: completion)
-    //  }
-    
 }
 
 extension AuthenticationViewModel {

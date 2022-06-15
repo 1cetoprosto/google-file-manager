@@ -17,9 +17,15 @@ class FilesViewModel: FilesViewModelType {
     
     func getFiles(completion: @escaping () -> ()) {
         
-        let networkService = NetworkService()
+        let networkService = NetworkService(session: URLSession.shared)
         
-        networkService.getFiles { [weak self] result in
+        let urlString = "https://sheets.googleapis.com/v4/spreadsheets/\(sheetId)/values/Sheet1!A1:D1000"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+        
+        networkService.getFiles(url: url) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {

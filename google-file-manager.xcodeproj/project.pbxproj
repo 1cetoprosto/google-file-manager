@@ -33,6 +33,8 @@
 		F398BA97285875CC0012041E /* FilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA96285875CC0012041E /* FilesCollectionViewCell.swift */; };
 		F398BA992859B51B0012041E /* FilesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA982859B51B0012041E /* FilesViewModelTests.swift */; };
 		F398BA9B2859CA400012041E /* FilesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9A2859CA400012041E /* FilesModelTests.swift */; };
+		F398BA9D2859F0FA0012041E /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */; };
+		F398BA9F285A08160012041E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9E285A08160012041E /* NetworkServiceTests.swift */; };
 		F3C51E8B28548CD900C23755 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8A28548CD900C23755 /* NetworkService.swift */; };
 		F3C51E9028548E5D00C23755 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8F28548E5D00C23755 /* FilesModel.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		F398BA96285875CC0012041E /* FilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F398BA982859B51B0012041E /* FilesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewModelTests.swift; sourceTree = "<group>"; };
 		F398BA9A2859CA400012041E /* FilesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModelTests.swift; sourceTree = "<group>"; };
+		F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		F398BA9E285A08160012041E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		F3C51E8A28548CD900C23755 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F3C51E8F28548E5D00C23755 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +195,9 @@
 			children = (
 				F34B187E2850CB4D00128204 /* google_file_managerTests.swift */,
 				F398BA982859B51B0012041E /* FilesViewModelTests.swift */,
+				F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */,
 				F398BA9A2859CA400012041E /* FilesModelTests.swift */,
+				F398BA9E285A08160012041E /* NetworkServiceTests.swift */,
 			);
 			path = "google-file-managerTests";
 			sourceTree = "<group>";
@@ -574,6 +580,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398BA9F285A08160012041E /* NetworkServiceTests.swift in Sources */,
+				F398BA9D2859F0FA0012041E /* AuthenticationViewModelTests.swift in Sources */,
 				F398BA992859B51B0012041E /* FilesViewModelTests.swift in Sources */,
 				F398BA9B2859CA400012041E /* FilesModelTests.swift in Sources */,
 				F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */,
