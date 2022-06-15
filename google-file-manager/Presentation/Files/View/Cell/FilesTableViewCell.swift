@@ -30,7 +30,9 @@ class FilesTableViewCell: UITableViewCell {
         //label.font = .
         label.textColor = UIColor.TableView.cellLabel
         label.textAlignment = .left
-        label.adjustsFontSizeToFitWidth = true
+        //label.adjustsFontSizeToFitWidth = true
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -85,7 +87,7 @@ class FilesTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             filesName.centerYAnchor.constraint(equalTo: backgroundViewCell.centerYAnchor, constant: 0),
             filesName.leadingAnchor.constraint(equalTo: cellImageView.trailingAnchor, constant: 5),
-            filesName.widthAnchor.constraint(equalToConstant: 200),
+            filesName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
             filesName.heightAnchor.constraint(equalToConstant: 20)
         ])
 

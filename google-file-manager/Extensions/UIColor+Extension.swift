@@ -15,8 +15,8 @@ extension UIColor {
     }
 
     struct Button {
-        static var title: UIColor { HEX.h75E6DA }
-        static var background: UIColor { HEX.h189AB4 }
+        static var title: UIColor { HEX.h007aff }
+        static var border: UIColor { HEX.h007aff }
     }
 
 
@@ -26,14 +26,14 @@ extension UIColor {
     }
 
     struct NavBar {
-        static var background: UIColor { HEX.h189AB4 }
+        static var background: UIColor { HEX.h05445E }
         static var text: UIColor { HEX.h75E6DA }
     }
 
     fileprivate struct HEX {
         // main colors
         static let h05445E = UIColor(hex: 0x05445E)
-        static let h189AB4 = UIColor(hex: 0x189AB4)
+        static let h007aff = UIColor(hex: 0x007aff)
         static let h75E6DA = UIColor(hex: 0x75E6DA)
         static let hD4F1F4 = UIColor(hex: 0xD4F1F4)
 //        static let hEFD4A0 = UIColor(hex: 0xEFD4A0)

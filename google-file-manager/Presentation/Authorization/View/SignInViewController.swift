@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SignInViewController: UIViewController {
     
@@ -13,11 +14,11 @@ class SignInViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Sign In", for: .normal)
-        button.setTitleColor(UIColor.link, for: .normal)
+        button.setTitleColor(UIColor.Button.title, for: .normal)
         button.layer.borderWidth = 1.1
-        button.layer.borderColor = UIColor.link.cgColor
+        button.layer.borderColor = UIColor.Button.border.cgColor
         button.layer.cornerRadius = 6
-        //button.backgroundColor = .systemBlue
+        //button.backgroundColor = UIColor.Button.background
         //button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         
@@ -28,13 +29,25 @@ class SignInViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Sign Out", for: .normal)
-        button.layer.cornerRadius = 10
-        button.backgroundColor = .systemBlue
-        button.layer.masksToBounds = true
+        button.setTitleColor(UIColor.Button.title, for: .normal)
+        button.layer.borderWidth = 1.1
+        button.layer.borderColor = UIColor.Button.border.cgColor
+        button.layer.cornerRadius = 6
+        //button.backgroundColor = UIColor.Button.background
+        //button.layer.masksToBounds = true
         button.isHidden = true
         button.addTarget(self, action: #selector(signOutButtonTapped), for: .touchUpInside)
         
         return button
+    }()
+    
+    lazy var userName: UILabel = {
+        let lbl = UILabel()
+        lbl.textAlignment = .center
+        lbl.textColor = UIColor.Main.text
+        lbl.text = "user test"
+        
+        return lbl
     }()
     
     private let googleService = GoogleService(authViewModel: AuthenticationViewModel())
@@ -44,8 +57,10 @@ class SignInViewController: UIViewController {
 
         title = "Authorization"
         view.backgroundColor = UIColor.Main.background
-        //navigationController?.view.backgroundColor = .systemBlue
+        navigationController?.view.backgroundColor = .systemBlue
         
+        //let user = GIDSignIn.sharedInstance.currentUser
+        userName.text = GIDSignIn.sharedInstance.currentUser?.profile?.name
         setConstraints()
     }
     
@@ -63,6 +78,8 @@ class SignInViewController: UIViewController {
             googleSignInButton.isHidden = false
             googleSignOutButton.isHidden = true
         }
+        //let user = GIDSignIn.sharedInstance.currentUser?.profile?.name
+        userName.text = GIDSignIn.sharedInstance.currentUser?.profile?.name
     }
 }
 
@@ -92,7 +109,15 @@ extension SignInViewController {
 extension SignInViewController {
     func setConstraints() {
         
-        let buttonStackView = UIStackView(arrangedSubviews: [googleSignInButton, googleSignOutButton])
+//        view.addSubview(userName)
+//        NSLayoutConstraint.activate([
+//            userName.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: 25),
+//            userName.bottomAnchor.constraint(equalTo: view.safeTopAnchor, constant: 0),
+//            userName.widthAnchor.constraint(equalToConstant: 250),
+//            userName.heightAnchor.constraint(equalToConstant: 50)
+//        ])
+        
+        let buttonStackView = UIStackView(arrangedSubviews: [userName, googleSignInButton, googleSignOutButton])
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         buttonStackView.axis = .vertical
         buttonStackView.spacing = 20
@@ -111,7 +136,7 @@ extension SignInViewController {
             buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             buttonStackView.widthAnchor.constraint(equalToConstant: 150),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 50)
+            buttonStackView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
 }
