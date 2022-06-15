@@ -14,14 +14,13 @@ struct FilesModel: Codable {
     var itemName = ""
     
     init(json: [String]) {
-        self.itemUUID = json[0].description
-        self.itemParentUUID = json[1].description
-        self.itemType = json[2].description
-        self.itemName = json[3].description
+        if json.count >= 4 {
+            self.itemUUID = json[0].description
+            self.itemParentUUID = json[1].description
+            self.itemType = json[2].description
+            self.itemName = json[3].description
+        }
     }
-//
-//    init() {
-//    }
 }
 
 // MARK: - GoogleSheet

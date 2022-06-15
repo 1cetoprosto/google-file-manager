@@ -27,12 +27,11 @@ class FilesTableViewCell: UITableViewCell {
     lazy var filesName: UILabel = {
         let label = UILabel()
         label.text = "files name"
-        //label.font = .
         label.textColor = UIColor.TableView.cellLabel
         label.textAlignment = .left
-        //label.adjustsFontSizeToFitWidth = true
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
+//        label.adjustsFontSizeToFitWidth = true
+//        label.lineBreakMode = .byWordWrapping
+//        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

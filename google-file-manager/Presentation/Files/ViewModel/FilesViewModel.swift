@@ -11,15 +11,9 @@ import UIKit
 class FilesViewModel: FilesViewModelType {
 
     private var selectedIndexPath: IndexPath?
-    //private var networkService: NetworkService!
     private var parent: String?
-    private var files: [FilesModel]? // Results<FilesModel>!
+    private(set) var files: [FilesModel]?
     var isFolder: Bool = true
-    
-    
-//    init(parent: String) {
-//        self.parent = parent
-//    }
     
     func getFiles(completion: @escaping () -> ()) {
         

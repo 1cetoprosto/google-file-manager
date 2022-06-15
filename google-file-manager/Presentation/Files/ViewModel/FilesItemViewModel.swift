@@ -19,8 +19,6 @@ class FilesItemViewModel: FilesItemViewModelType {
         return file.itemType
     }
     
-    //var image: String
-    
     init(file: FilesModel) {
         self.file = file
     }
