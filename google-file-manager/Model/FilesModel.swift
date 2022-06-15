@@ -23,6 +23,17 @@ struct FilesModel: Codable {
     }
 }
 
+extension FilesModel: Equatable {
+    static func == (lhs: FilesModel, rhs: FilesModel) -> Bool {
+        guard lhs.itemUUID == rhs.itemUUID &&
+                lhs.itemParentUUID == rhs.itemParentUUID &&
+                lhs.itemType == rhs.itemType &&
+                lhs.itemName == rhs.itemName
+        else { return false }
+        return true
+    }
+}
+
 // MARK: - GoogleSheet
 struct GoogleSheet: Codable {
     let range, majorDimension: String

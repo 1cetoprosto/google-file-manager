@@ -8,8 +8,8 @@
 import Foundation
 
 class FilesItemViewModel: FilesItemViewModelType {
-    
-    private var file: FilesModel
+
+    private(set) var file: FilesModel
     
     var name: String {
         return file.itemName

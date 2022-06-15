@@ -12,10 +12,8 @@
 		9BDEDA28FAA685CD1812A8BB /* Pods_google_file_managerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AB4A2DE698CAA0641C57C9 /* Pods_google_file_managerTests.framework */; };
 		F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18672850CB4C00128204 /* AppDelegate.swift */; };
 		F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18692850CB4C00128204 /* SceneDelegate.swift */; };
-		F34B186C2850CB4C00128204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B186B2850CB4C00128204 /* ViewController.swift */; };
 		F34B18712850CB4D00128204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34B18702850CB4D00128204 /* Assets.xcassets */; };
 		F34B18742850CB4D00128204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34B18722850CB4D00128204 /* LaunchScreen.storyboard */; };
-		F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B187E2850CB4D00128204 /* google_file_managerTests.swift */; };
 		F34B18892850CB4D00128204 /* google_file_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18882850CB4D00128204 /* google_file_managerUITests.swift */; };
 		F34B188B2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */; };
 		F34B18992851AB8C00128204 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18982851AB8C00128204 /* GoogleService.swift */; };
@@ -35,6 +33,7 @@
 		F398BA9B2859CA400012041E /* FilesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9A2859CA400012041E /* FilesModelTests.swift */; };
 		F398BA9D2859F0FA0012041E /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */; };
 		F398BA9F285A08160012041E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BA9E285A08160012041E /* NetworkServiceTests.swift */; };
+		F398BAA6285A15FE0012041E /* FilesItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398BAA5285A15FE0012041E /* FilesItemViewModelTests.swift */; };
 		F3C51E8B28548CD900C23755 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8A28548CD900C23755 /* NetworkService.swift */; };
 		F3C51E9028548E5D00C23755 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C51E8F28548E5D00C23755 /* FilesModel.swift */; };
 /* End PBXBuildFile section */
@@ -69,12 +68,10 @@
 		F34B18642850CB4C00128204 /* google-file-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "google-file-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18672850CB4C00128204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F34B18692850CB4C00128204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F34B186B2850CB4C00128204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F34B18702850CB4D00128204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F34B18732850CB4D00128204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F34B18752850CB4D00128204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34B187A2850CB4D00128204 /* google-file-managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "google-file-managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F34B187E2850CB4D00128204 /* google_file_managerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerTests.swift; sourceTree = "<group>"; };
 		F34B18842850CB4D00128204 /* google-file-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "google-file-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18882850CB4D00128204 /* google_file_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITests.swift; sourceTree = "<group>"; };
 		F34B188A2850CB4D00128204 /* google_file_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = google_file_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -95,6 +92,7 @@
 		F398BA9A2859CA400012041E /* FilesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModelTests.swift; sourceTree = "<group>"; };
 		F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
 		F398BA9E285A08160012041E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		F398BAA5285A15FE0012041E /* FilesItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesItemViewModelTests.swift; sourceTree = "<group>"; };
 		F3C51E8A28548CD900C23755 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F3C51E8F28548E5D00C23755 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,8 +178,6 @@
 				F3C51E8E28548E3D00C23755 /* Model */,
 				F3C51E8C28548D9200C23755 /* Services */,
 				F3C51E8D28548DAA00C23755 /* Extensions */,
-				F34B186B2850CB4C00128204 /* ViewController.swift */,
-				F34B189C2851BD5F00128204 /* AuthenticationViewModel.swift */,
 				F34B18702850CB4D00128204 /* Assets.xcassets */,
 				F34B18722850CB4D00128204 /* LaunchScreen.storyboard */,
 				F34B18752850CB4D00128204 /* Info.plist */,
@@ -193,11 +189,9 @@
 		F34B187D2850CB4D00128204 /* google-file-managerTests */ = {
 			isa = PBXGroup;
 			children = (
-				F34B187E2850CB4D00128204 /* google_file_managerTests.swift */,
-				F398BA982859B51B0012041E /* FilesViewModelTests.swift */,
-				F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */,
-				F398BA9A2859CA400012041E /* FilesModelTests.swift */,
-				F398BA9E285A08160012041E /* NetworkServiceTests.swift */,
+				F398BAA4285A13F60012041E /* Presentation */,
+				F398BAA1285A13680012041E /* Model */,
+				F398BAA0285A13580012041E /* Services */,
 			);
 			path = "google-file-managerTests";
 			sourceTree = "<group>";
@@ -290,9 +284,52 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F398BAA0285A13580012041E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F398BA9C2859F0FA0012041E /* AuthenticationViewModelTests.swift */,
+				F398BA9E285A08160012041E /* NetworkServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F398BAA1285A13680012041E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F398BA9A2859CA400012041E /* FilesModelTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F398BAA2285A13D90012041E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F398BA982859B51B0012041E /* FilesViewModelTests.swift */,
+				F398BAA5285A15FE0012041E /* FilesItemViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F398BAA3285A13E60012041E /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				F398BAA2285A13D90012041E /* ViewModel */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		F398BAA4285A13F60012041E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F398BAA3285A13E60012041E /* Files */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		F3C51E8C28548D9200C23755 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F34B189C2851BD5F00128204 /* AuthenticationViewModel.swift */,
 				F34B18982851AB8C00128204 /* GoogleService.swift */,
 				F3C51E8A28548CD900C23755 /* NetworkService.swift */,
 			);
@@ -562,7 +599,6 @@
 				F3C51E9028548E5D00C23755 /* FilesModel.swift in Sources */,
 				F3C51E8B28548CD900C23755 /* NetworkService.swift in Sources */,
 				F34B18992851AB8C00128204 /* GoogleService.swift in Sources */,
-				F34B186C2850CB4C00128204 /* ViewController.swift in Sources */,
 				F398BA90285709AD0012041E /* FilesItemViewModel.swift in Sources */,
 				F398BA8A285701F40012041E /* FilesItemViewModelType.swift in Sources */,
 				F398BA9328570E900012041E /* FilesTableViewCell.swift in Sources */,
@@ -580,11 +616,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398BAA6285A15FE0012041E /* FilesItemViewModelTests.swift in Sources */,
 				F398BA9F285A08160012041E /* NetworkServiceTests.swift in Sources */,
 				F398BA9D2859F0FA0012041E /* AuthenticationViewModelTests.swift in Sources */,
 				F398BA992859B51B0012041E /* FilesViewModelTests.swift in Sources */,
 				F398BA9B2859CA400012041E /* FilesModelTests.swift in Sources */,
-				F34B187F2850CB4D00128204 /* google_file_managerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

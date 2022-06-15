@@ -22,15 +22,14 @@ class FilesViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testFilesModelShouldBeNotNil() throws {
-        //sut.numberOfRowInSection(for: -1)
+//    func testFilesModelShouldBeNotNil() throws {
+//    
 //        sut.getFiles {
 //            
 //        }
 //        let files = sut.files
 //        
-//        XCTAssertNotNil(files, "FilesModel should be not nil") 
-        
-    }
+//        XCTAssertNotNil(files)
+//    }
 
 }
