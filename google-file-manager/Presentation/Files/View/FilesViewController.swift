@@ -32,10 +32,6 @@ class FilesViewController: UIViewController {
 
         return tableView
     }()
-
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//    }
     
     private func createCollectionView() {
         let layout = UICollectionViewFlowLayout()
@@ -76,20 +72,8 @@ class FilesViewController: UIViewController {
         }
         
         viewModel?.getFiles { [weak self] in
-//            self?.tableView.reloadData()
-//            self?.collectionView?.reloadData()
             guard let self = self else { return }
-            if self.isTableViewShowing {
-                //self.navigationItem.rightBarButtonItems = [self.gridViewButton, self.createNewFolderButton, self.createNewFileButton]
-                self.collectionView?.isHidden = true
-                self.tableView.isHidden = false
-                self.tableView.reloadData()
-            }else{
-                //self.navigationItem.rightBarButtonItems = [self.listViewButton, self.createNewFolderButton, self.createNewFileButton]
-                self.tableView.isHidden = true
-                self.collectionView?.isHidden = false
-                self.collectionView?.reloadData()
-            }
+            self.reloadData()
         }
     }
     
@@ -115,12 +99,60 @@ class FilesViewController: UIViewController {
         self.navigationController?.pushViewController(signInViewController, animated: true)
     }
     
+    private func reloadData() {
+        if self.isTableViewShowing {
+            self.collectionView?.isHidden = true
+            self.tableView.isHidden = false
+            self.tableView.reloadData()
+        }else{
+            self.tableView.isHidden = true
+            self.collectionView?.isHidden = false
+            self.collectionView?.reloadData()
+        }
+    }
+    
     @objc func createNewFile() {
-        
+        let alert = UIAlertController(title: "Create new file", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Enter file name here"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (_) in
+            let textField = alert.textFields![0] as UITextField
+            guard textField.text != "" else{return}
+            let parentUuid = self.viewModel?.parent ?? ""
+            let newEntry = FilesModel(name: textField.text!,
+                                      type: "f",
+                                      parentUuid: parentUuid)
+            
+            self.viewModel?.updateFiles(entry: newEntry) { [weak self] in
+                guard let self = self else { return }
+                self.reloadData()
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func createNewFolder() {
-        
+        let alert = UIAlertController(title: "Create new folder", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Enter folder name here"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (_) in
+            let textField = alert.textFields![0] as UITextField
+            guard textField.text != "" else{return}
+            let parentUuid = self.viewModel?.parent ?? ""
+            let newEntry = FilesModel(name: textField.text!,
+                                      type: "d",
+                                      parentUuid: parentUuid)
+            
+            self.viewModel?.updateFiles(entry: newEntry) { [weak self] in
+                guard let self = self else { return }
+                self.reloadData()
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func switchView() {
@@ -181,19 +213,20 @@ extension FilesViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-//    func tableView(_ tableView: UITableView,
-//                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        guard let viewModel = viewModel else { return nil }
-//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
-//            viewModel.deleteSaleModel(atIndexPath: indexPath)
-//
-//            viewModel.getSales { [weak self] in
-//                self?.tableView.reloadData()
-//            }
-//        }
-//
-//        return UISwipeActionsConfiguration(actions: [deleteAction])
-//    }
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let viewModel = viewModel else { return nil }
+        viewModel.selectRow(atIndexPath: indexPath)
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            viewModel.deleteFiles()
+            viewModel.getFiles { [weak self] in
+                guard let self = self else { return }
+                self.reloadData()
+            }
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -204,7 +237,7 @@ extension FilesViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
-        print("qty collection row: \(viewModel.numberOfRowInSection(for: section))")
+        //print("qty collection row: \(viewModel.numberOfRowInSection(for: section))")
         return viewModel.numberOfRowInSection(for: section)
     }
     
@@ -228,7 +261,6 @@ extension FilesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         if viewModel.isFolder {
             let folderViewModel = viewModel.viewModelForSelectedRow()
-            //detailViewModel?.newModel = false
             
             let fileVC = FilesViewController()
             fileVC.isTableViewShowing = isTableViewShowing
@@ -239,23 +271,23 @@ extension FilesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
     }
     
-//    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?{
-//        let index = indexPath.row
-//        let identifier = "\(index)" as NSString
-//
-//        return UIContextMenuConfiguration(identifier: identifier, previewProvider: nil) { _ in
-//            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { (_) in
-//                print("delete")
-//                if let index = sheetData.firstIndex(of: self.mainData[indexPath.row]) {
-//                    print("Found peaches at index \(index)")
-//                    self.callDeleteFiles(index: index)
-//                }
-//            }
-//            return UIMenu(title: "", image: nil, children: [deleteAction])
-//        }
-//    }
-//
-    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?{
+        guard let viewModel = viewModel else { return nil}
+        viewModel.selectRow(atIndexPath: indexPath)
+        
+        let identifier = "\(indexPath.row)" as NSString
+
+        return UIContextMenuConfiguration(identifier: identifier, previewProvider: nil) { _ in
+            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { (_) in
+                viewModel.deleteFiles()
+                viewModel.getFiles { [weak self] in
+                    guard let self = self else { return }
+                    self.reloadData()
+                }
+            }
+            return UIMenu(title: "", image: nil, children: [deleteAction])
+        }
+    }
 }
 
 // MARK: Constraints

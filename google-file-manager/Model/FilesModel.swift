@@ -21,6 +21,15 @@ struct FilesModel: Codable {
             self.itemName = json[3].description
         }
     }
+    
+    init(name: String, type: String, parentUuid: String = "") {
+        self.itemName = name
+        self.itemType = type
+        self.itemParentUUID = parentUuid
+        self.itemUUID = UUID().uuidString
+    }
+    
+    init () {}
 }
 
 extension FilesModel: Equatable {
@@ -38,6 +47,29 @@ extension FilesModel: Equatable {
 struct GoogleSheet: Codable {
     let range, majorDimension: String
     let values: [[String]]
+}
+
+// MARK: - UpdatedGoogleSheet
+struct UpdatedGoogleSheet: Codable {
+    let spreadsheetID: String
+    let totalUpdatedRows, totalUpdatedColumns, totalUpdatedCells, totalUpdatedSheets: Int
+    let responses: [Response]
+
+    enum CodingKeys: String, CodingKey {
+        case spreadsheetID = "spreadsheetId"
+        case totalUpdatedRows, totalUpdatedColumns, totalUpdatedCells, totalUpdatedSheets, responses
+    }
+}
+
+// MARK: - Response
+struct Response: Codable {
+    let spreadsheetID, updatedRange: String
+    let updatedRows, updatedColumns, updatedCells: Int
+
+    enum CodingKeys: String, CodingKey {
+        case spreadsheetID = "spreadsheetId"
+        case updatedRange, updatedRows, updatedColumns, updatedCells
+    }
 }
 
 var filesArray: [FilesModel] = []
