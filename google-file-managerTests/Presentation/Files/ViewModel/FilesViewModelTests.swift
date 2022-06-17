@@ -14,22 +14,11 @@ class FilesViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         sut = FilesViewModel()
-        //sut.files = [FilesModel(json: ["One","Two"])]
     }
 
     override func tearDownWithError() throws {
         sut = nil
         try super.tearDownWithError()
     }
-
-//    func testFilesModelShouldBeNotNil() throws {
-//    
-//        sut.getFiles {
-//            
-//        }
-//        let files = sut.files
-//        
-//        XCTAssertNotNil(files)
-//    }
 
 }

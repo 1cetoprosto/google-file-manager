@@ -9,42 +9,35 @@ import UIKit
 
 class FilesViewController: UIViewController {
 
-    var viewModel: FilesViewModelType?
+    private(set) var viewModel: FilesViewModelType?
     
-    var listViewButton: UIBarButtonItem!
-    var gridViewButton: UIBarButtonItem!
-    var createNewFileButton: UIBarButtonItem!
-    var createNewFolderButton: UIBarButtonItem!
+    private var listViewButton: UIBarButtonItem!
+    private var gridViewButton: UIBarButtonItem!
+    private var createNewFileButton: UIBarButtonItem!
+    private var createNewFolderButton: UIBarButtonItem!
     
-    let idFilesTableViewCell = "idFilesTableViewCell"
-    let idFilesCollectionViewCell = "idFilesCollectionViewCell"
+    private let idFilesTableViewCell = "idFilesTableViewCell"
+    private let idFilesCollectionViewCell = "idFilesCollectionViewCell"
     
-    var isTableViewShowing: Bool = false
+    private var isTableViewShowing: Bool = false
     
-    private var collectionView: UICollectionView?
+    private(set) var collectionView: UICollectionView!
     
-    let tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = UIColor.Main.background
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.dataSource = self
+        tableView.delegate = self
 
         return tableView
     }()
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        viewModel = FilesViewModel(parent: "")
-//        viewModel?.getFiles { [weak self] in
-//            print(self?.viewModel?.numberOfRowInSection(for: 0))
-//            self?.tableView.reloadData()
-//        }
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = UIColor.Main.background
-        
+    private func createCollectionView() {
         let layout = UICollectionViewFlowLayout()
         
         layout.scrollDirection = .vertical
@@ -53,23 +46,26 @@ class FilesViewController: UIViewController {
         layout.itemSize = CGSize(width: (view.frame.size.width/3)-4,
                                  height: (view.frame.size.width/3*1.1)-4)
         
-        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        if let collectionView = collectionView {
-            collectionView.backgroundColor = .clear//UIColor.Main.background
-            collectionView.translatesAutoresizingMaskIntoConstraints = false
-            
-            collectionView.register(FilesCollectionViewCell.self, forCellWithReuseIdentifier: idFilesCollectionViewCell)
-            collectionView.dataSource = self
-            collectionView.delegate = self
-            collectionView.isHidden = false
-            view.addSubview(collectionView)
-            collectionView.frame = view.bounds
-        }
+        collectionView.backgroundColor = .clear//UIColor.Main.background
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(FilesCollectionViewCell.self, forCellWithReuseIdentifier: idFilesCollectionViewCell)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.isHidden = false
+        view.addSubview(collectionView)
+        collectionView.frame = view.bounds
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = UIColor.Main.background
+        
+        createCollectionView()
         
         tableView.register(FilesTableViewCell.self, forCellReuseIdentifier: idFilesTableViewCell)
-        tableView.dataSource = self
-        tableView.delegate = self
+        
         
         configureNavBar()
         

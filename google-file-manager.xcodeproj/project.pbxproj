@@ -10,6 +10,7 @@
 		2196821282C2B69B1E401638 /* Pods_google_file_manager_google_file_managerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A68FEFF5D766EB97A84D31 /* Pods_google_file_manager_google_file_managerUITests.framework */; };
 		34268A78DFA746FA7B78F539 /* Pods_google_file_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94616920F2E65C5E19B8E5D3 /* Pods_google_file_manager.framework */; };
 		9BDEDA28FAA685CD1812A8BB /* Pods_google_file_managerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AB4A2DE698CAA0641C57C9 /* Pods_google_file_managerTests.framework */; };
+		F340A064285AF142001D33E2 /* FilesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340A063285AF142001D33E2 /* FilesViewControllerTests.swift */; };
 		F34B18682850CB4C00128204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18672850CB4C00128204 /* AppDelegate.swift */; };
 		F34B186A2850CB4C00128204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B18692850CB4C00128204 /* SceneDelegate.swift */; };
 		F34B18712850CB4D00128204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34B18702850CB4D00128204 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		AEED8B8C14620F24F5846899 /* Pods-google-file-manager-google-file-managerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-google-file-manager-google-file-managerUITests.debug.xcconfig"; path = "Target Support Files/Pods-google-file-manager-google-file-managerUITests/Pods-google-file-manager-google-file-managerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7AB4A2DE698CAA0641C57C9 /* Pods_google_file_managerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_google_file_managerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A68FEFF5D766EB97A84D31 /* Pods_google_file_manager_google_file_managerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_google_file_manager_google_file_managerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F340A063285AF142001D33E2 /* FilesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewControllerTests.swift; sourceTree = "<group>"; };
 		F34B18642850CB4C00128204 /* google-file-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "google-file-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B18672850CB4C00128204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F34B18692850CB4C00128204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 				B7AB4A2DE698CAA0641C57C9 /* Pods_google_file_managerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F340A062285AF109001D33E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F340A063285AF142001D33E2 /* FilesViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F34B185B2850CB4C00128204 = {
@@ -313,6 +323,7 @@
 		F398BAA3285A13E60012041E /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				F340A062285AF109001D33E2 /* View */,
 				F398BAA2285A13D90012041E /* ViewModel */,
 			);
 			path = Files;
@@ -620,6 +631,7 @@
 				F398BA9F285A08160012041E /* NetworkServiceTests.swift in Sources */,
 				F398BA9D2859F0FA0012041E /* AuthenticationViewModelTests.swift in Sources */,
 				F398BA992859B51B0012041E /* FilesViewModelTests.swift in Sources */,
+				F340A064285AF142001D33E2 /* FilesViewControllerTests.swift in Sources */,
 				F398BA9B2859CA400012041E /* FilesModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
