@@ -34,8 +34,8 @@ class FilesViewModel: FilesViewModelType {
                     
                     guard var files = filesArray else { return }
                     self.allFiles = files
-                    files = files.filter { $0.itemParentUUID == self.parent ?? ""  } //&& $0.itemUUID != ""
-                    
+                    files = files.filter { $0.itemParentUUID == self.parent ?? "" }
+                    files = files.filter { $0.itemUUID != "" }
                     files = files.sorted {
                         if $0.itemType != $1.itemType {
                             return $0.itemType < $1.itemType
@@ -82,42 +82,6 @@ class FilesViewModel: FilesViewModelType {
             }
         }
     }
-    
-//    func deleteFiles(completion: @escaping () -> ()) { //index: Int,
-//
-//        guard let selectedIndexPath = selectedIndexPath,
-//              let files = self.files else { return }
-//
-//        let file = files[selectedIndexPath.row]
-//
-//        guard let delIndex = allFiles?.firstIndex(of: file) else { return }
-//        //print("Found peaches at index \(delIndex)")
-//        let range = "Sheet1!A\(delIndex + 1):D\(delIndex + 1)"
-//
-//        let networkService = NetworkService(session: URLSession.shared)
-//
-//        let urlString = "https://sheets.googleapis.com/v4/spreadsheets/\(sheetId)/values/\(range):clear"
-//        guard let url = URL(string: urlString) else {
-//            print("Invalid URL")
-//            return
-//        }
-//
-//        networkService.deleteFiles(url: url) { [weak self] result in
-//            guard let self = self else { return }
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .success(let deleted):
-//                    if deleted {
-//                        self.files?.remove(at: selectedIndexPath.row)
-//                        completion()
-//                        //self.getFiles(completion: completion)
-//                    }
-//                case .failure(let error):
-//                    print("Error deleteFiles: \(error.localizedDescription)")
-//                }
-//            }
-//        }
-//    }
     
     func deleteFiles() { //index: Int,
         

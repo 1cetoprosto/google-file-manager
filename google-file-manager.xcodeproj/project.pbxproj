@@ -191,7 +191,6 @@
 				F34B18702850CB4D00128204 /* Assets.xcassets */,
 				F34B18722850CB4D00128204 /* LaunchScreen.storyboard */,
 				F34B18752850CB4D00128204 /* Info.plist */,
-				F398BA852856FC5A0012041E /* Resources */,
 			);
 			path = "google-file-manager";
 			sourceTree = "<group>";
@@ -265,13 +264,6 @@
 				F398BA832856FBEA0012041E /* View */,
 			);
 			path = Authorization;
-			sourceTree = "<group>";
-		};
-		F398BA852856FC5A0012041E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		F398BA88285701390012041E /* ViewModel */ = {
