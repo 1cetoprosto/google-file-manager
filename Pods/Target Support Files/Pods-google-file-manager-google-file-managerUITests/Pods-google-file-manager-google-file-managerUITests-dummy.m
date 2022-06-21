@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_google_file_manager_google_file_managerUITests : NSObject
+@end
+@implementation PodsDummy_Pods_google_file_manager_google_file_managerUITests
+@end

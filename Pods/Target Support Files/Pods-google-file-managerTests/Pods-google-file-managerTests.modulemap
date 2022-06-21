@@ -1,0 +1,6 @@
+framework module Pods_google_file_managerTests {
+  umbrella header "Pods-google-file-managerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
